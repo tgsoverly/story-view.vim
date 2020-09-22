@@ -6,7 +6,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,12 +17,15 @@ jobs:
         uses: ruby/setup-ruby@v1.46.0
         with:
           ruby-version: 2.6
-      - run: bundle install
-      
+
       - name: Setup Vim
         uses: rhysd/action-setup-vim@v1.2.4
-        with: 
+        with:
+          neovim: true
           version: "stable"
 
-      - name: Run a multi-line script
-        run: neovim -v
+      - name: Test
+        run: |
+          cd $GITHUB_WORKSPACE
+          bundle install
+          VSPEC_VIM=nvim rake ci
