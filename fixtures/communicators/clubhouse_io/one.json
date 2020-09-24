@@ -1,0 +1,102 @@
+{
+   "epics":{
+      "next":null,
+      "data":[
+
+      ],
+      "total":0
+   },
+   "stories":{
+      "next":null,
+      "data":[
+         {
+            "app_url":"https://app.clubhouse.io/test/story/17",
+            "description":"https://github.com/tgsoverly/story-view.vim/blob/main/fixtures/file.js#L1",
+            "archived":false,
+            "started":false,
+            "story_links":[
+
+            ],
+            "entity_type":"story",
+            "labels":[
+
+            ],
+            "external_tickets":[
+
+            ],
+            "mention_ids":[
+
+            ],
+            "member_mention_ids":[
+
+            ],
+            "story_type":"feature",
+            "linked_files":[
+
+            ],
+            "completed_at_override":null,
+            "started_at":null,
+            "completed_at":null,
+            "name":"Github Link",
+            "completed":false,
+            "comments":[
+
+            ],
+            "blocker":false,
+            "branches":[
+
+            ],
+            "epic_id":null,
+            "external_links":[
+
+            ],
+            "previous_iteration_ids":[
+
+            ],
+            "requested_by_id":"5f54ea94-3dfb-44c2-b284-8bf881dd0166",
+            "iteration_id":null,
+            "tasks":[
+
+            ],
+            "started_at_override":null,
+            "group_id":null,
+            "workflow_state_id":500000008,
+            "updated_at":"2020-09-27T00:07:00Z",
+            "pull_requests":[
+
+            ],
+            "group_mention_ids":[
+
+            ],
+            "support_tickets":[
+
+            ],
+            "follower_ids":[
+               "5f54ea94-3dfb-44c2-b284-8bf881dd0166"
+            ],
+            "owner_ids":[
+
+            ],
+            "external_id":null,
+            "id":17,
+            "estimate":null,
+            "commits":[
+
+            ],
+            "files":[
+
+            ],
+            "position":12147483648,
+            "blocked":false,
+            "project_id":2,
+            "deadline":null,
+            "stats":{
+               "num_related_documents":0
+            },
+            "created_at":"2020-09-27T00:02:16Z",
+            "moved_at":"2020-09-27T00:02:16Z"
+         }
+      ],
+      "total":1
+   }
+}
