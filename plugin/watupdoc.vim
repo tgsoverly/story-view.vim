@@ -3,7 +3,7 @@ if exists('g:loaded_watupdoc') | finish | endif " prevent loading file twice
 let s:save_cpo = &cpo " save user coptions
 set cpo&vim " reset them to defaults
 
-let g:watupdoc = watupdoc()
+let g:watupdoc = watupdoc#new()
 call g:watupdoc.init()
 
 nnoremap <silent> <Plug>(StoryViewOpen) :<C-W>call g:watupdoc.open_urls()<CR>
