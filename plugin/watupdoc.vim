@@ -6,8 +6,8 @@ set cpo&vim " reset them to defaults
 let g:watupdoc = watupdoc#new()
 call g:watupdoc.init()
 
-nnoremap <silent> <Plug>(StoryViewOpen) :<C-W>call g:watupdoc.open_urls()<CR>
-silent! nmap <unique> <C-W>      <Plug>(StoryViewOpen)
+nmap <silent> <LocalLeader>od <Plug>(WatupdocOpen)<CR>
+nnoremap <silent> <Plug>(WatupdocOpen) :call g:watupdoc.open_urls()<CR>
 
 augroup StoryView
   autocmd BufWritePost * call g:watupdoc.update_buffer(str2nr(expand('<abuf>')))
