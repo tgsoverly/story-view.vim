@@ -1,21 +1,30 @@
-Plugin that will hightlight lines in your code that have open stories/tickets for them in your ticket system.
+[![Actions Status](https://github.com/tgsoverly/watupdoc.vim/workflows/CI/badge.svg)](https://github.com/tgsoverly/watupdoc.vim/actions)
 
-# What problem is being solved?
+# What is it?
 
-You have discussions around nice to have features and you say something like "Next time we change this code we should update this method."  To track that you have one big problem: how do you track that work?  This plugin is an attempt to solve that problem.
+Plugin that will `hightlight` lines in your code that have `links` to them in external systems.
+You can then read the link description and open them in an external browser.
 
-# How to use
+Here is a demo:
 
-All you need to do is store a link to the line of code in a supported URL format in the story and configure your communicator to your project management system.
+[TODO]
 
-# Supported Url Formats
+## What problem is being solved?
+
+You have discussions around nice to have features and you say something like "Next time we change this code we should update this method."  Now you have another problem: how do you track that work?  This plugin is an attempt to solve that problem.
+
+## How to use
+
+All you need to do is store a link to the line of code in a `Supported URL Format` in a `Supported External System`.
+
+## Supported URL Formats
 
 * Github
 
-# Supported Project Management Systems
+## Supported External Systems
 
 * Clubhouse.io
 
-* Helpful Things
+## Helpful Things
 
 1. I was new to vimscript and http://bling.github.io/blog/2013/08/16/modularizing-vimscript/ helped me strcture code.
