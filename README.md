@@ -7,7 +7,14 @@ You can then read the link description and open them in an external browser.
 
 Here is a demo:
 
-[TODO]
+![watupdoc](https://user-images.githubusercontent.com/482572/94562513-6cfc6500-0233-11eb-9a2e-0d62e608cf43.gif)
+
+What I am doing:
+
+1. Opening a file that has a link to it in clubhouse.io
+2. `:w` the file to trigger the plugin.
+3. Moving the cursor over the lines to show the information at the bottom of the screen.
+4. `C-W` on the line to open that external reference in a browser.
 
 ## What problem is being solved?
 
@@ -17,14 +24,28 @@ You have discussions around nice to have features and you say something like "Ne
 
 All you need to do is store a link to the line of code in a `Supported URL Format` in a `Supported External System`.
 
-## Supported URL Formats
+### Supported URL Formats
 
 * Github
 
-## Supported External Systems
+### Supported External Systems
 
 * Clubhouse.io
 
-## Helpful Things
+### Prerequisites
+
+1. `curl` installed.
+1. File must be in a `git` repo.
+
+### Tested Systems
+
+1. OS X
+
+### Test VIM
+
+1. neovim
+
+## Thanks
 
 1. I was new to vimscript and http://bling.github.io/blog/2013/08/16/modularizing-vimscript/ helped me strcture code.
+1. I have used the Ale plugin to learn how to do some stuff: https://github.com/dense-analysis/ale
