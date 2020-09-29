@@ -4,8 +4,11 @@
 
 ## What is it?
 
-Plugin that will `hightlight` lines in your code that have `links` to them in external systems.
-You can then read the link description and open them in an external browser.
+A vim plugin to indicate that code is referenced in external systems.
+
+1. It hightlights lines that are referenced in external systems.
+1. It gives you information on the lines referenced when the cursor is on those lines.
+1. It allows you open the referenced system an external browser.
 
 Here is a demo:
 
