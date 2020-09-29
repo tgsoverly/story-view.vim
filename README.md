@@ -1,6 +1,8 @@
 [![Actions Status](https://github.com/tgsoverly/watupdoc.vim/workflows/CI/badge.svg)](https://github.com/tgsoverly/watupdoc.vim/actions)
 
-# What is it?
+# Wat (is) up (with my external) doc(umentation)
+
+## What is it?
 
 Plugin that will `hightlight` lines in your code that have `links` to them in external systems.
 You can then read the link description and open them in an external browser.
