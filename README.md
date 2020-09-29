@@ -41,7 +41,7 @@ All you need to do is store a link to the line of code in a `Supported URL Forma
 
 1. OS X
 
-### Test VIM
+### Tested VIM
 
 1. neovim
 
