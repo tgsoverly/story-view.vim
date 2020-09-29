@@ -6,7 +6,7 @@
 
 A vim plugin to indicate that code is referenced in external systems.
 
-1. It hightlights lines that are referenced in external systems.
+1. It highlights lines that are referenced in external systems.
 1. It gives you information on the lines referenced when the cursor is on those lines.
 1. It allows you open the referenced system an external browser.
 
