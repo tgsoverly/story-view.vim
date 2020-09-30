@@ -3,44 +3,44 @@ function! g:communicators#clubhouse_io#new()
 
   " The fetch_stories function is not covered unnder automated testing
   function! obj.fetch_stories(file_path)
-    let l:relative_file_path = utils#path#get_relative_path(a:file_path)
+    let relative_file_path = utils#path#get_relative_path(a:file_path)
     let sq = "'"
-    let l:command = 'curl -X GET -s '
-    let l:headers = '-H "Content-Type: application/json" -H "Clubhouse-Token: $CLUBHOUSE_API_TOKEN" '
-    let l:params = '-d ' . sq . '{ "query": "' . l:relative_file_path . '" }' . sq
-    let l:url = '-L "https://api.clubhouse.io/api/v3/search" '
-    let l:response = system(l:command . l:headers . l:params . l:url)
+    let command = 'curl -X GET -s '
+    let headers = '-H "Content-Type: application/json" -H "Clubhouse-Token: $CLUBHOUSE_API_TOKEN" '
+    let params = '-d ' . sq . '{ "query": "' . relative_file_path . '" }' . sq
+    let url = '-L "https://api.clubhouse.io/api/v3/search" '
+    let response = system(command . headers . params . url)
 
-    return l:response
+    return response
   endfunction
 
   " This takes the response from fetch_stories and puts it in the standard
   " format for display.  It is seperated to give the ability to test.
   function! obj.normalize_response(response, file_path, link_parsers)
-    let l:response = utils#json#parse(a:response)
-    let l:relative_file_path = utils#path#get_relative_path(a:file_path)
+    let response = json_decode(a:response)
+    let relative_file_path = utils#path#get_relative_path(a:file_path)
 
-    let l:normalized_stories = []
+    let normalized_stories = []
 
-    if has_key(l:response, 'stories') && has_key(l:response.stories, 'data')
-      for story in l:response.stories.data
-        let l:lines = []
+    if has_key(response, 'stories') && has_key(response.stories, 'data')
+      for story in response.stories.data
+        let lines = []
         for link in a:link_parsers
-          call extend(l:lines, link.get_lines(l:relative_file_path, story.description))
+          call extend(lines, link.get_lines(relative_file_path, story.description))
 
           for comment in story.comments
-            call extend(l:lines, link.get_lines(l:relative_file_path, comment.text))
+            call extend(lines, link.get_lines(relative_file_path, comment.text))
           endfor
         endfor
 
-        let l:uniq_lines = filter(copy(l:lines), 'index(l:lines, v:val, v:key+1)==-1')
-        call add(l:normalized_stories, {'name':story.name, 'url':story.app_url, 'lines': l:uniq_lines})
-        unlet l:uniq_lines
-        unlet l:lines
+        let uniq_lines = filter(copy(lines), 'index(lines, v:val, v:key+1)==-1')
+        call add(normalized_stories, {'name':story.name, 'url':story.app_url, 'lines': uniq_lines})
+        unlet uniq_lines
+        unlet lines
       endfor
     endif
 
-    return l:normalized_stories
+    return normalized_stories
   endfunction
 
   return obj

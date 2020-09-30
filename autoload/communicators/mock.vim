@@ -10,9 +10,9 @@ function! g:communicators#mock#new()
   endfunction
 
   function! obj.normalize_response(response, file_path, link_parsers)
-    let l:parsed = utils#json#parse(a:response)
+    let parsed = json_decode(a:response)
 
-    return l:parsed
+    return parsed
   endfunction
 
 

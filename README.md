@@ -10,6 +10,21 @@ A vim plugin to indicate that code is referenced in external systems.
 1. It gives you information on the lines referenced when the cursor is on those lines.
 1. It allows you open the referenced system an external browser.
 
+## Installation:
+
+### Plug
+
+```
+  Plug 'tgsoverly/watupdoc.vim'
+```
+
+### Configuration
+
+To open in an external browser
+```
+nmap <silent> <LocalLeader>od <Plug>(WatupdocOpen)
+```
+
 Here is a demo:
 
 ![watupdoc](https://user-images.githubusercontent.com/482572/94562513-6cfc6500-0233-11eb-9a2e-0d62e608cf43.gif)
@@ -19,7 +34,9 @@ What I am doing:
 1. Opening a file that has a link to it in clubhouse.io
 2. `:w` the file to trigger the plugin.
 3. Moving the cursor over the lines to show the information at the bottom of the screen.
-4. `C-W` on the line to open that external reference in a browser.
+4. `\od` on the line to open that external reference in a browser.
+
+
 
 ## What problem is being solved?
 
