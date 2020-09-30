@@ -15,17 +15,34 @@ A vim plugin to indicate that code is referenced in external systems.
 ### Plug
 
 ```
-  Plug 'tgsoverly/watupdoc.vim'
+Plug 'tgsoverly/watupdoc.vim'
 ```
 
 ### Configuration
 
-To open in an external browser
+1. Map the command to open in an external browser
 ```
 nmap <silent> <LocalLeader>od <Plug>(WatupdocOpen)
 ```
+2. Configure your external system(s)
+```
+TODO
+```
 
-Here is a demo:
+### Prerequisites
+
+1. `curl` installed.
+1. File must be in a `git` repo.
+
+### Tested Systems
+
+1. OS X
+
+### Tested VIM
+
+1. neovim
+
+## Demo
 
 ![watupdoc](https://user-images.githubusercontent.com/482572/94562513-6cfc6500-0233-11eb-9a2e-0d62e608cf43.gif)
 
@@ -35,8 +52,6 @@ What I am doing:
 2. `:w` the file to trigger the plugin.
 3. Moving the cursor over the lines to show the information at the bottom of the screen.
 4. `\od` on the line to open that external reference in a browser.
-
-
 
 ## What problem is being solved?
 
@@ -53,19 +68,6 @@ All you need to do is store a link to the line of code in a `Supported URL Forma
 ### Supported External Systems
 
 * Clubhouse.io
-
-### Prerequisites
-
-1. `curl` installed.
-1. File must be in a `git` repo.
-
-### Tested Systems
-
-1. OS X
-
-### Tested VIM
-
-1. neovim
 
 ## Thanks
 
