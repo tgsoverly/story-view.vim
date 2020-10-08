@@ -9,9 +9,15 @@ function! g:watupdoc#new()
   let obj.communicators = [g:communicators#clubhouse_io#new()]
   let obj.link_parsers = [g:link_parsers#github#new()]
 
+  !empty($SomeVar)
+
   function! obj.init()
     highlight DeepFreezeHighlight ctermbg=17
     call sign_define('DeepFreezeSign', {'text' : '^>', 'linehl' : 'DeepFreezeHighlight'})
+
+    if !empty($WHATUPDOC_CLUBHOUSE_API_TOKEN)
+      call add(self.communicators, g:communicators#clubhouse_io#new())
+    endif
   endfunction
 
   " Main interface with VIM

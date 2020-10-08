@@ -6,7 +6,7 @@ function! g:communicators#clubhouse_io#new()
     let relative_file_path = utils#path#get_relative_path(a:file_path)
     let sq = "'"
     let command = 'curl -X GET -s '
-    let headers = '-H "Content-Type: application/json" -H "Clubhouse-Token: $CLUBHOUSE_API_TOKEN" '
+    let headers = '-H "Content-Type: application/json" -H "Clubhouse-Token: $WHATUPDOC_CLUBHOUSE_API_TOKEN" '
     let params = '-d ' . sq . '{ "query": "' . relative_file_path . '" }' . sq
     let url = '-L "https://api.clubhouse.io/api/v3/search" '
     let response = system(command . headers . params . url)
