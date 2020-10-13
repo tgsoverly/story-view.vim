@@ -6,12 +6,20 @@ function! g:watupdoc#new()
 
   " Default values
   let obj.delay = 60000.0
-  let obj.communicators = [g:communicators#clubhouse_io#new()]
+  let obj.communicators = []
   let obj.link_parsers = [g:link_parsers#github#new()]
 
   function! obj.init()
     highlight DeepFreezeHighlight ctermbg=17
     call sign_define('DeepFreezeSign', {'text' : '^>', 'linehl' : 'DeepFreezeHighlight'})
+
+    if !empty($WHATUPDOC_CLUBHOUSE_API_TOKEN)
+      call add(self.communicators, g:communicators#clubhouse_io#new())
+    endif
+
+    if !empty($WHATUPDOC_STACK_OVERFLOW_KEY) && !empty($WHATUPDOC_STACK_OVERFLOW_TEAM) && !empty($WHATUPDOC_STACK_OVERFLOW_ACCESS_TOKEN)
+      call add(self.communicators, g:communicators#stack_overflow#new())
+    endif
   endfunction
 
   " Main interface with VIM
@@ -23,6 +31,7 @@ function! g:watupdoc#new()
     endif
 
     let stories = self.fetch_stories(file_path)
+
     call self.update_ui(file_path, stories)
 
     return 1
