@@ -28,7 +28,7 @@ describe 'communicators#stack_overflow.normalize_response'
       let response = system('cat fixtures/communicators/stack_overflow/one.json')
       let relative_file_path = 'fixtures/file.js'
 
-      Expect clubhouse_io.normalize_response(response, relative_file_path, [github]) == [{"name":"Test question", "url":'https://stackoverflow.com/c/team-name/questions/1/test-question', "lines" :[1]}]
+      Expect clubhouse_io.normalize_response(response, relative_file_path, [github]) == [{"name":"Test question (Stack Overflow)", "url":'https://stackoverflow.com/c/team-name/questions/1/test-question', "lines" :[1]}]
     end
   end
 end

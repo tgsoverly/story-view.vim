@@ -69,6 +69,14 @@ All you need to do is store a link to the line of code in a `Supported URL Forma
 
 * Clubhouse.io
 
+1. Get an API token from your clubhouse user profile.
+1. Set the following environment variable in your profile: `WATUPDOC_CLUBHOUSE_API_TOKEN`
+
+* Stack Overlow
+
+1. Follow the instructions to set up an OAUTH app here: https://www.stackoverflow.help/support/solutions/articles/36000154987-stack-overflow-for-teams-api
+1. Set the following environment variables in your profile: `WATUPDOC_STACK_OVERFLOW_ACCESS_TOKEN`, `WATUPDOC_STACK_OVERFLOW_TEAM`, and `WATUPDOC_STACK_OVERFLOW_KEY`
+
 ## Thanks
 
 1. I was new to vimscript and http://bling.github.io/blog/2013/08/16/modularizing-vimscript/ helped me strcture code.
