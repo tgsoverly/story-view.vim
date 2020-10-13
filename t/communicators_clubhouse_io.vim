@@ -28,7 +28,7 @@ describe 'communicators#clubhouse_io.normalize_response'
       let response = system('cat fixtures/communicators/clubhouse_io/one.json')
       let relative_file_path = 'fixtures/file.js'
 
-      Expect clubhouse_io.normalize_response(response, relative_file_path, [github]) == [{"name":"Github Link", "url":'https://app.clubhouse.io/test/story/17', "lines" :[1]}]
+      Expect clubhouse_io.normalize_response(response, relative_file_path, [github]) == [{"name":"Github Link (Clubhouse)", "url":'https://app.clubhouse.io/test/story/17', "lines" :[1]}]
     end
   end
 
@@ -40,7 +40,7 @@ describe 'communicators#clubhouse_io.normalize_response'
       let response = system('cat fixtures/communicators/clubhouse_io/comment.json')
       let relative_file_path = 'fixtures/file.js'
 
-      Expect clubhouse_io.normalize_response(response, relative_file_path, [github]) == [{"name":"Github Link", "url":'https://app.clubhouse.io/test/story/17', "lines" :[1]}]
+      Expect clubhouse_io.normalize_response(response, relative_file_path, [github]) == [{"name":"Github Link (Clubhouse)", "url":'https://app.clubhouse.io/test/story/17', "lines" :[1]}]
     end
   end
 end

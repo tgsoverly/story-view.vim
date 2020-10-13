@@ -8,14 +8,15 @@ function s:watupdoc()
     let g:watupdoc = watupdoc#new()
     call g:watupdoc.init()
   endif
+
   return g:watupdoc
 endfunction
 
-nnoremap <silent> <Plug>(WatupdocOpen) :call <SID>watupdoc.open_urls()<CR>
+nnoremap <silent> <Plug>(WatupdocOpen) :call <SID>watupdoc().open_urls()<CR>
 
 augroup WatupdocGroup
-  autocmd BufWritePost * call s:watupdoc.update_buffer(str2nr(expand('<abuf>')))
-  autocmd CursorMoved * call s:watupdoc.display_info()
+  autocmd BufWritePost * call s:watupdoc().update_buffer(str2nr(expand('<abuf>')))
+  autocmd CursorMoved * call s:watupdoc().display_info()
 augroup END
 
 let &cpo = s:save_cpo " and restore after

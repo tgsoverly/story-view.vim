@@ -1,0 +1,30 @@
+{
+   "items":[
+      {
+         "tags":[
+            "claims"
+         ],
+         "owner":{
+            "reputation":126,
+            "user_id":2,
+            "user_type":"team_admin",
+            "profile_image":"https://i.stack.imgur.com/rsen2.jpg?s=128&g=1",
+            "display_name":"Person",
+            "link":"https://stackoverflow.com/c/team-name/users/1/user"
+         },
+         "is_answered":false,
+         "view_count":2,
+         "answer_count":0,
+         "score":0,
+         "last_activity_date":1602535507,
+         "creation_date":1602535507,
+         "question_id":463,
+         "link":"https://stackoverflow.com/c/team-name/questions/1/test-question",
+         "title":"Test question",
+         "body":"https://github.com/tgsoverly/story-view.vim/blob/main/fixtures/file.js#L1"
+      }
+   ],
+   "has_more":false,
+   "quota_max":10000,
+   "quota_remaining":9999
+}
