@@ -24,10 +24,6 @@ Plug 'tgsoverly/watupdoc.vim'
 ```
 nmap <silent> <LocalLeader>od <Plug>(WatupdocOpen)
 ```
-2. Configure your external system(s)
-```
-TODO
-```
 
 ### Prerequisites
 
@@ -59,7 +55,8 @@ You have discussions around nice to have features and you say something like "Ne
 
 ## How to use
 
-All you need to do is store a link to the line of code in a `Supported URL Format` in a `Supported External System`.
+1. Setup the desired `Supported External System`s
+1. Store a link to the line of code in a `Supported URL Format` in a `Supported External System`.
 
 ### Supported URL Formats
 
@@ -72,7 +69,7 @@ All you need to do is store a link to the line of code in a `Supported URL Forma
 1. Get an API token from your clubhouse user profile.
 1. Set the following environment variable in your profile: `WATUPDOC_CLUBHOUSE_API_TOKEN`
 
-* Stack Overlow
+* Stack Overlow (for Teams)
 
 1. Follow the instructions to set up an OAUTH app here: https://www.stackoverflow.help/support/solutions/articles/36000154987-stack-overflow-for-teams-api
 1. Set the following environment variables in your profile: `WATUPDOC_STACK_OVERFLOW_ACCESS_TOKEN`, `WATUPDOC_STACK_OVERFLOW_TEAM`, and `WATUPDOC_STACK_OVERFLOW_KEY`
